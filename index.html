@@ -31,8 +31,14 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: url('https://stream.moviebee.club/Branding/Splashscreen?format=jpg&foregroundLayer=20.0') center center / cover no-repeat;
-      filter: blur(3px) brightness(0.4);
+      background: url('https://stream.moviebee.club/Branding/Splashscreen?format=png&foregroundLayer=20.0') center center / cover no-repeat;
+    }
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: rgba(8, 8, 12, 0.88);
     }
     .animated-bg {
       display: none;
@@ -45,7 +51,7 @@
       justify-content: center;
       text-align: center;
       position: relative;
-      z-index: 1;
+      z-index: 2;
       width: 100vw;
       box-sizing: border-box;
     }
@@ -140,6 +146,7 @@
 </head>
 <body>
   <div class="bg-blur"></div>
+  <div class="bg-overlay"></div>
   <div class="animated-bg"></div>
   <div style="position:fixed;top:24px;left:24px;z-index:10;font-family:'Noto Sans',Arial,sans-serif;display:flex;flex-direction:column;gap:6px;">
     <a href="https://t.me/movie_bee_club" target="_blank" style="color:#fff;text-decoration:none;font-weight:400;font-size:0.82rem;display:inline-flex;align-items:center;">
